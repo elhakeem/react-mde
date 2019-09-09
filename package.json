@@ -1,5 +1,5 @@
 {
-  "name": "react-mde",
+  "name": "hakim-react-mde",
   "version": "7.6.2",
   "description": "React Markdown Editor",
   "main": "./lib/js/index.js",
@@ -84,5 +84,8 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
-  "style": "react-mde/lib/styles/css/react-mde-all.css"
+  "style": "react-mde/lib/styles/css/react-mde-all.css",
+  "dependencies": {
+    "draft-js": "^0.11.0"
+  }
 }

@@ -18,7 +18,7 @@ export const MdeToolbarButton: React.FunctionComponent<MdeToolbarButtonProps> = 
   const finalButtonProps = { ...defaultButtonProps, ...(buttonProps || {}) };
   const finalButtonComponent = buttonComponentClass || "button";
   return (
-    <li className="mde-header-item">
+    <li className={`mde-header-item mde-${name}-item`}>
       {React.createElement(finalButtonComponent, {
         "data-name": name,
         ...finalButtonProps,

@@ -66,6 +66,7 @@ export class ReactMde extends React.Component<ReactMdeProps, ReactMdeState> {
 
   constructor(props: ReactMdeProps) {
     super(props);
+    console.log(this.props)
     this.state = {
       editorHeight: props.minEditorHeight
     };

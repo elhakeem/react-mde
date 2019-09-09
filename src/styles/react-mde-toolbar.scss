@@ -123,6 +123,7 @@
         padding: 5px;
         z-index: 2;
         transform: translateX(-9px);
+        width: 212px;
         li {
           margin: 0;
           white-space: nowrap;
@@ -157,7 +158,20 @@
               }
             }
           }
-
+        }
+        li[class*=mde-table-cell] {
+          display: inline-block;
+          button {
+            background: #bbb;
+            width: 18px;
+            height: 18px;
+            margin: 0 2px 2px 0;
+            outline: none;
+            border-radius: 2px;
+            &:hover {
+              background: #aaa;
+            }
+          }
         }
         &::before {
           position: absolute;

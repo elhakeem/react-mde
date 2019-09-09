@@ -8,6 +8,7 @@ import {quoteCommand} from "./quoteCommand";
 import {codeCommand} from "./codeCommand";
 import {imageCommand} from "./imageCommand";
 import {checkedListCommand, orderedListCommand, unorderedListCommand} from "./listCommands";
+import {tableCommand} from './tableCommand'
 
 const getDefaultCommands: () => CommandGroup[] = () => [
     {
@@ -18,6 +19,9 @@ const getDefaultCommands: () => CommandGroup[] = () => [
     },
     {
         commands: [unorderedListCommand, orderedListCommand, checkedListCommand]
+    },
+    {
+        commands: [tableCommand]
     }
 ];
 
@@ -34,5 +38,6 @@ export {
     checkedListCommand,
     orderedListCommand,
     unorderedListCommand,
+    tableCommand,
     getDefaultCommands
 };
