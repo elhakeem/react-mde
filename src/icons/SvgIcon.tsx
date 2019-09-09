@@ -84,6 +84,7 @@ const tableIcon =
     </svg>;
 
 export const SvgIcon: React.FunctionComponent<IconProviderProps> = (({icon}) => {
+    console.log(icon, tableIcon)
     switch(icon) {
         case "header":
             return headerIcon;
