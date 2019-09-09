@@ -45,7 +45,6 @@ function cellsCommands() {
         for (let y = 1; y <= tableMaxDimention.y; y++) {
             cells.push({
                 name: `table-cell-${x}x${y}`,
-                icon: () => <div className="table-cell-command"></div>,
                 execute: (state: TextState, api: TextApi) => makeTableCellCommand(state, api, x, y),
             })
         }
