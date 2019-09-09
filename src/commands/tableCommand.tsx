@@ -56,6 +56,5 @@ function cellsCommands() {
 export const tableCommand: Command = {
     name: "table",
     buttonProps: {"aria-label": "Add Table"},
-    children: cellsCommands(),
-    icon: () => <i className="fas fa-table"></i>
+    children: cellsCommands()
 };

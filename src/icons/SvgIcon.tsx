@@ -76,6 +76,13 @@ const boldIcon =
               d="M304.793 243.891c33.639-18.537 53.657-54.16 53.657-95.693 0-48.236-26.25-87.626-68.626-104.179C265.138 34.01 240.849 32 209.661 32H24c-8.837 0-16 7.163-16 16v33.049c0 8.837 7.163 16 16 16h33.113v318.53H24c-8.837 0-16 7.163-16 16V464c0 8.837 7.163 16 16 16h195.69c24.203 0 44.834-1.289 66.866-7.584C337.52 457.193 376 410.647 376 350.014c0-52.168-26.573-91.684-71.207-106.123zM142.217 100.809h67.444c16.294 0 27.536 2.019 37.525 6.717 15.828 8.479 24.906 26.502 24.906 49.446 0 35.029-20.32 56.79-53.029 56.79h-76.846V100.809zm112.642 305.475c-10.14 4.056-22.677 4.907-31.409 4.907h-81.233V281.943h84.367c39.645 0 63.057 25.38 63.057 63.057.001 28.425-13.66 52.483-34.782 61.284z"/>
     </svg>;
 
+const tableIcon =
+    <svg className="svg-icon" aria-hidden="true" data-prefix="fas"
+        data-icon="table" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+        data-fa-i2svg="">
+        <path fill="currentColor" d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM232 432H54a6 6 0 0 1-6-6V296h184v136zm0-184H48V112h184v136zm226 184H280V296h184v130a6 6 0 0 1-6 6zm6-184H280V112h184v136z"></path>
+    </svg>;
+
 export const SvgIcon: React.FunctionComponent<IconProviderProps> = (({icon}) => {
     switch(icon) {
         case "header":
@@ -100,6 +107,8 @@ export const SvgIcon: React.FunctionComponent<IconProviderProps> = (({icon}) => 
             return orderedListIcon;
         case "checked-list":
             return checkedListIcon;
+        case "table":
+            return tableIcon;
         default:
             return null;
     }
