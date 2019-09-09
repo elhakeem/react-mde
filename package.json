@@ -1,5 +1,5 @@
 {
-  "name": "markdowner",
+  "name": "react-md-magic",
   "version": "1.0.0",
   "description": "React Markdown Editor",
   "main": "./lib/js/index.js",
