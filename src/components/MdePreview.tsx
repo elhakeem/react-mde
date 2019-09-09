@@ -49,6 +49,7 @@ export class MdePreview extends React.Component<
     if (typeof finalHtml === "string") {
       content = (
         <div
+          dir="rtl"
           className="mde-preview-content"
           dangerouslySetInnerHTML={{ __html: finalHtml || "<p>&nbsp;</p>" }}
           ref={p => (this.previewRef = p)}
@@ -60,6 +61,7 @@ export class MdePreview extends React.Component<
 
     return (
       <div
+        dir="rtl"
         className={classNames("mde-preview", { className, loading })}
         style={{ minHeight: minHeight + 10 }}
         data-testid="mde-preview"

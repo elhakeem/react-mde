@@ -32,6 +32,7 @@ export class TextArea extends React.Component<MdeEditorProps, {}> {
     } = this.props;
     return (
       <textarea
+        dir="rtl"
         className={`mde-text ${className || ""}`}
         style={{ height }}
         ref={editorRef}
