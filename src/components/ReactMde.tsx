@@ -17,7 +17,8 @@ export interface ReactMdeProps {
   value: string;
   onChange: (value: string) => void;
   selectedTab: "write" | "preview";
-  onTabChange: (tab: "write" | "preview") => void,
+  onTabChange: (tab: "write" | "preview") => void;
+  onBlur: (text: string) => void;
   generateMarkdownPreview: GenerateMarkdownPreview;
   minEditorHeight: number;
   maxEditorHeight: number;
@@ -56,6 +57,7 @@ export class ReactMde extends React.Component<ReactMdeProps, ReactMdeState> {
     commands: getDefaultCommands(),
     getIcon: name => <SvgIcon icon={name}/>,
     emptyPreviewHtml: "<p>&nbsp;</p>",
+    onBlur: () => {},
     readOnly: false,
     l18n: enL18n,
     minEditorHeight: 200,
@@ -66,7 +68,6 @@ export class ReactMde extends React.Component<ReactMdeProps, ReactMdeState> {
 
   constructor(props: ReactMdeProps) {
     super(props);
-    console.log(this.props)
     this.state = {
       editorHeight: props.minEditorHeight
     };
@@ -156,6 +157,7 @@ export class ReactMde extends React.Component<ReactMdeProps, ReactMdeState> {
               <TextArea
                 editorRef={this.setTextAreaRef}
                 onChange={this.handleTextChange}
+                onBlur={this.props.onBlur}
                 readOnly={readOnly}
                 textAreaProps={textAreaProps}
                 height={this.state.editorHeight}

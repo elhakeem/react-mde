@@ -3,6 +3,7 @@ import * as React from "react";
 export interface MdeEditorProps {
   value: string;
   onChange: (value: string) => void;
+  onBlur: (text: string) => void;
   className?: string;
   editorRef?: (ref: HTMLTextAreaElement) => void;
   readOnly?: boolean;
@@ -20,6 +21,9 @@ export class TextArea extends React.Component<MdeEditorProps, {}> {
     const { onChange } = this.props;
     onChange(event.target.value);
   };
+  handleOnBlur = () => {
+    this.props.onBlur(this.props.value)
+  }
 
   render() {
     const {
@@ -38,6 +42,8 @@ export class TextArea extends React.Component<MdeEditorProps, {}> {
         ref={editorRef}
         onChange={this.handleOnChange}
         readOnly={readOnly}
+        onBlur={this.handleOnBlur}
+        required
         value={value}
         {...textAreaProps}
         data-testid="text-area"

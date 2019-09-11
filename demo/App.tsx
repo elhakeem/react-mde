@@ -39,6 +39,7 @@ export class App extends React.Component<{}, AppState> {
           onChange={this.handleValueChange}
           onTabChange={this.handleTabChange}
           value={this.state.value}
+          onBlur={(text) => console.log(text)}
           generateMarkdownPreview={markdown =>
             Promise.resolve(this.converter.makeHtml(markdown))
           }
