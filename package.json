@@ -14,8 +14,7 @@
     "lint": "pretty-quick",
     "tsc": "tsc",
     "webpack": "webpack --config webpack.config.demo.dev.js",
-    "webpack:prod": "webpack --config webpack.config.demo.prod.js",
-    "publish": "npm run build && git add . && git commit -am 'build last commit' && git push && npm publish"
+    "webpack:prod": "webpack --config webpack.config.demo.prod.js"
   },
   "repository": {
     "type": "git",
