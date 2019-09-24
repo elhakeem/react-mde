@@ -161,6 +161,7 @@
         }
         li[class*=mde-table-cell] {
           display: inline-block;
+          float: left;
           button {
             background: #bbb;
             width: 18px;
@@ -168,7 +169,6 @@
             margin: 0 2px 2px 0;
             outline: none;
             border-radius: 2px;
-            float: left;
             &:hover {
               background: #aaa;
             }

@@ -490,15 +490,15 @@ body {
               .mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li button p.header-4 {
                 font-size: 12px; }
         .mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li[class*=mde-table-cell] {
-          display: inline-block; }
+          display: inline-block;
+          float: left; }
           .mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li[class*=mde-table-cell] button {
             background: #bbb;
             width: 18px;
             height: 18px;
             margin: 0 2px 2px 0;
             outline: none;
-            border-radius: 2px;
-            float: left; }
+            border-radius: 2px; }
             .mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown li[class*=mde-table-cell] button:hover {
               background: #aaa; }
         .mde-header ul.mde-header-group li.mde-header-item ul.react-mde-dropdown::before {
