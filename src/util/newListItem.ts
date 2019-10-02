@@ -79,7 +79,7 @@ export interface Line {
     };
   
     // if ordered list item
-    if (!!_line.match(/^[0-9]*. /g)) {
+    if (!!_line.match(/^[0-9]*\. /g)) {
       let prefix = _line.match(/^[0-9]*. /g)[0];
       let order = Number(prefix.split('.')[0]) + 1
       spaces = line.split(prefix)[0]
