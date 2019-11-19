@@ -11,6 +11,7 @@ export interface MdeEditorProps {
   editorRef?: (ref: HTMLTextAreaElement) => void;
   readOnly?: boolean;
   height?: number;
+  id?: string;
   textAreaProps?: Partial<
     React.DetailedHTMLProps<
       React.TextareaHTMLAttributes<HTMLTextAreaElement>,
@@ -33,8 +34,8 @@ export const insertText = (text: string, position: number, insertText: string): 
   };
 }
 
-function setCaretPosition(caretPos) {
-  const elem:any = document.getElementById('mde-textarea');
+function setCaretPosition(caretPos, id) {
+  const elem:any = document.getElementById(id || "mde-textarea");
   elem.value = elem.value
   if(elem != null) {
       if(elem.createTextRange) {
@@ -97,7 +98,7 @@ export class TextArea extends React.Component<MdeEditorProps, {}> {
       this.props.onChange(insertion.text);
       
       setTimeout(() => {
-        setCaretPosition(insertion.position);
+        setCaretPosition(insertion.position, this.props.id);
         clickedEnter = false;
       }, 0)
 
@@ -116,7 +117,7 @@ export class TextArea extends React.Component<MdeEditorProps, {}> {
     return (
       <textarea
         dir="rtl"
-        id="mde-textarea"
+        id={this.props.id || "mde-textarea"}
         className={`mde-text ${className || ""}`}
         style={{ height }}
         ref={editorRef}

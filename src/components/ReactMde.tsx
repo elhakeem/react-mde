@@ -32,6 +32,7 @@ export interface ReactMdeProps {
   readOnly?: boolean;
   textAreaProps?: Partial<React.DetailedHTMLProps<React.TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>>;
   l18n?: L18n;
+  id?: string
 }
 
 export interface ReactMdeState {
@@ -161,6 +162,7 @@ export class ReactMde extends React.Component<ReactMdeProps, ReactMdeState> {
                 readOnly={readOnly}
                 textAreaProps={textAreaProps}
                 height={this.state.editorHeight}
+                id={this.props.id}
                 value={value}
               />
               <div className="grip"
